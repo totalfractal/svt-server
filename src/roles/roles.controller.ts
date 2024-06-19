@@ -24,6 +24,7 @@ export class RolesController {
     }
 
     @ApiOperation({summary: 'Получение списка ролей'})
+    
     @ApiResponse({status: 200, type: [Role]})
     @Get()
     getAll(){
