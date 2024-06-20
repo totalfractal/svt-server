@@ -46,15 +46,14 @@ jobs:
           host: ${{ secrets.VPS_SSH_HOST }}
           # VPS username
           username: ${{ secrets.VPS_SSH_USERNAME }}
-          # SSH key (copy it from your local machine)
-          key: ${{ secrets.VPS_SSH_SECRET }}
+          password: ${{ secrets.VPS_SSH_PASSWORD }}
           # SSH port
           port: ${{ secrets.VPS_SSH_PORT }}
           script: |
-            echo "Pull new image"
-            docker-compose -f /home/${{ secrets.VPS_SSH_USERNAME }}/svt-docker-dev-deploy/docker-compose.yml pull
+            mkdir -p /your_dir_name/tes
+            docker-compose -f ../home/${{ secrets.VPS_SSH_USERNAME }}/svt-docker-dev-deploy/docker-compose.server.dev.yml pull
             echo "Restart the container"
-            docker-compose -f /home/${{ secrets.VPS_SSH_USERNAME }}/svt-docker-dev-deploy/docker-compose.yml up --force-recreate --build --no-deps -d
+            docker-compose -f ../home/${{ secrets.VPS_SSH_USERNAME }}/svt-docker-dev-deploy/docker-compose.server.dev.yml up --force-recreate --build --no-deps -d
             echo "Delete old image"
             docker image prune -f
   
