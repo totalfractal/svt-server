@@ -64,11 +64,8 @@ Ok, close ssh session.
 Second - download docker-compose.server.dev.yml to VPS
 
 ```bash
-# Создайте папку 
-$ scp /Users/totalfractal/NodeProjects/svt-server/docker-compose.server.dev.yml root@188.225.47.232:/home/drngk/mhph-docker-dev-deploy/svt-docker-dev-deploy
-
-# Покиньте ssh и
-$ docker-compose -f docker-compose.actions.dev.yml up --force-recreate --build --no-deps -d
+# 
+$ scp /Users/totalfractal/NodeProjects/svt-server/docker-compose.server.dev.yml root@188.225.47.232:/home/drngk/svt-docker-dev-deploy
 ```
 
 ## Postgres
