@@ -5,7 +5,7 @@ services:
     container_name: svt-nest-server
     image: drgnk/svt-nest-dev:latest
     env_file:
-      - ./main/.docker.dev.env
+      - ./.docker.dev.env
     entrypoint: /entrypoint.sh
 
     ports:
@@ -20,7 +20,7 @@ services:
     container_name: postgress
     image: postgres:14
     env_file:
-      - ./main/.docker.dev.env
+      - ./.docker.dev.env
     environment:
       PG_DATA: /var/lib/postgresql/data
     ports:

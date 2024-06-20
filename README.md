@@ -68,6 +68,13 @@ Second - download docker-compose.server.dev.yml to VPS
 $ scp /Users/totalfractal/NodeProjects/svt-server/docker-compose.server.dev.yml root@188.225.47.232:/home/drngk/svt-docker-dev-deploy
 ```
 
+Third - copy .env file to VPS
+
+```bash
+# 
+$ scp /Users/totalfractal/NodeProjects/svt-server/src/.docker.dev.env root@188.225.47.232:/home/drngk/svt-docker-dev-deploy/
+```
+
 ## Postgres
 
 1. В `.env` файлах нужно указать настройки и доступ к Postgres-серверу.
