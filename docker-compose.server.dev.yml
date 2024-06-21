@@ -15,10 +15,6 @@ services:
     depends_on:
       - postgres
     restart: always
-    # https://stackoverflow.com/a/52989931
-    networks:
-        - dockernet
- 
 
   postgres:
 
@@ -33,9 +29,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/svt-data
     restart: always
-    # https://stackoverflow.com/a/52989931
-    networks:
-        - dockernet
+
 
 volumes:
   pgdata:
