@@ -13,7 +13,7 @@ services:
       - 9228:9228
     command: npm run start:dev
     depends_on:
-      - svt-postgres
+      - postgres
     restart: always
 
  
