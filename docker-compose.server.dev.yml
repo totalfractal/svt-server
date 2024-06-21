@@ -21,14 +21,15 @@ services:
  
 
   postgres:
-    container_name: postgress
+
+    container_name: svt-postgres
     image: postgres:14
     env_file:
       - ./.docker.dev.env
     environment:
       PG_DATA: /var/lib/postgresql/data
     ports:
-      - 5432:5432
+      - 5434:5434
     volumes:
       - pgdata:/var/lib/postgresql/data
     restart: always
@@ -38,6 +39,8 @@ services:
 
 volumes:
   pgdata:
+    external: true
+      
 
 # https://stackoverflow.com/a/52989931
 networks:
