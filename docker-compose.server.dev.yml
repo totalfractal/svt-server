@@ -13,11 +13,9 @@ services:
       - 9228:9228
     command: npm run start:dev
     depends_on:
-      - postgres
+      - svt-postgres
     restart: always
-    # https://stackoverflow.com/a/52989931
-    networks:
-        - dockernet
+
  
 
   postgres:
@@ -33,14 +31,9 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/svt-data
     restart: always
-    # https://stackoverflow.com/a/52989931
-    networks:
-        - dockernet
+
 
 volumes:
   pgdata:
       
 
-# https://stackoverflow.com/a/52989931
-networks:
-    dockernet:
