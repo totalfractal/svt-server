@@ -27,11 +27,11 @@ services:
     environment:
       PG_DATA: /var/lib/postgresql/svt-data
     ports:
-      - 5434:5434
-    volumes:
+      - 5434:5432
+   
       - pgdata:/var/lib/postgresql/svt-data
     restart: always
-    command: -p 5434
+
 
 
 volumes:

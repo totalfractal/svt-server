@@ -3,7 +3,7 @@ import { NestFactory } from "@nestjs/core";
 import { JwtService } from "@nestjs/jwt";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import { AppModule } from "./app.module";
-import { CustomValidationPipe } from "./pipes/validation.pipe";
+import { CustomValidationPipe } from "./roles/pipes/validation.pipe";
 
 
 async function start() {
