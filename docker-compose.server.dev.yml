@@ -35,6 +35,3 @@ volumes:
   pgdata:
       
 
-# https://stackoverflow.com/a/52989931
-networks:
-    dockernet:
