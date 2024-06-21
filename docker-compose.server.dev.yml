@@ -39,7 +39,6 @@ services:
 
 volumes:
   pgdata:
-    external: true
       
 
 # https://stackoverflow.com/a/52989931
