@@ -15,6 +15,9 @@ services:
     depends_on:
       - postgres
     restart: always
+    # https://stackoverflow.com/a/52989931
+    networks:
+            - dockernet
 
   postgres:
     container_name: postgress
@@ -35,5 +38,6 @@ services:
 volumes:
   pgdata:
 
+# https://stackoverflow.com/a/52989931
 networks:
     dockernet:
