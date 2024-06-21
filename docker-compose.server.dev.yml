@@ -28,6 +28,12 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     restart: always
+    # https://stackoverflow.com/a/52989931
+    networks:
+        - dockernet
 
 volumes:
   pgdata:
+
+networks:
+    dockernet:
